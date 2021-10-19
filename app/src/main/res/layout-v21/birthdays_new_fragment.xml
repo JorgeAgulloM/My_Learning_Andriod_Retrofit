@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black_Clear">
+
+    <LinearLayout
+        android:id="@+id/layoutSearImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/black_Clear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:translationZ="2dp"
+        android:visibility="gone">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@color/white"
+            android:text="Selecciona la imagen de cumpleaños, dale a compartir y selecciona 'Copiar enlace'. Ahora vuelve hacía atras para seguir con el nuevo cumpleaños"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:gravity="center"/>
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            tools:ignore="WebViewLayout" />
+
+    </LinearLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Nuevo cumpleaños"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/cardBirth"
+        app:layout_constraintStart_toStartOf="@+id/cardBirth"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardBirth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:checkable="true"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt1"
+        android:background="@color/black_Clear">
+
+        <DatePicker
+            android:id="@+id/datePicker"
+            style="@android:style/Widget.Material.Light.DatePicker"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:datePickerMode="calendar"
+            android:background="@color/white"
+            android:visibility="gone"
+            android:translationZ="1dp" >
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCloseDP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_margin="8dp"
+                android:text="cerrar"/>
+
+        </DatePicker>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@color/black_Clear">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/txtNameBirthDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_gravity="center"
+                android:hint="Escribe un nombre"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:inputType="textPersonName"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAddDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:visibility="visible"
+                android:text="Indica una fecha"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAddImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:visibility="visible"
+                android:text="pulsa para añadir una imagen" />
+
+            <ImageView
+                android:id="@+id/imageBirthDay"
+                android:layout_width="match_parent"
+                android:layout_height="194dp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnNewBirthDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="Añadir nuevo Cumpleaños"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/cardBirth"
+        app:layout_constraintStart_toStartOf="@+id/cardBirth"
+        app:layout_constraintTop_toBottomOf="@+id/cardBirth"
+        android:enabled="false"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

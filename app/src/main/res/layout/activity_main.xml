@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_Clear">
+
+    <LinearLayout
+        android:id="@+id/home_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/star_Clear_700"
+            app:titleTextColor="@color/white" />
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/star_Clear_200"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:headerLayout="@layout/navigate_header"
+        app:menu="@menu/activity_navigation_drawer" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@android:dimen/app_icon_size">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtInfoConNet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Conexión a internet:"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnOpenLayoutTonterias"
+            android:layout_width="220dp"
+            android:layout_height="80dp"
+            android:layout_margin="40dp"
+            android:text="Retrofit"
+            android:theme="@style/MyButtonRetrofit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtInfoConNet" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutTonterias"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@color/black_Clear"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/btnOpenLayoutTonterias"
+            app:layout_constraintTop_toBottomOf="@+id/btnOpenLayoutTonterias">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGoToTonterias"
+                android:layout_width="220dp"
+                android:layout_height="0dp"
+                android:layout_margin="8dp"
+                android:text="Api Tonterias"
+                android:theme="@style/MyButtonApi"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGoToUsers"
+                android:layout_width="220dp"
+                android:layout_height="0dp"
+                android:layout_margin="8dp"
+                android:text="Usuarios"
+                android:theme="@style/MyButtonUsers"
+                app:layout_constraintEnd_toEndOf="@+id/btnGoToTonterias"
+                app:layout_constraintStart_toStartOf="@+id/btnGoToTonterias"
+                app:layout_constraintTop_toBottomOf="@+id/btnGoToTonterias" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGoToEvents"
+                android:layout_width="220dp"
+                android:layout_height="0dp"
+                android:layout_margin="8dp"
+                android:text="Eventos"
+                android:theme="@style/MyButtonEvents"
+                app:layout_constraintEnd_toEndOf="@+id/btnGoToTonterias"
+                app:layout_constraintStart_toStartOf="@+id/btnGoToTonterias"
+                app:layout_constraintTop_toBottomOf="@+id/btnGoToUsers" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGoToBirthDays"
+                android:layout_width="220dp"
+                android:layout_height="0dp"
+                android:layout_margin="8dp"
+                android:text="Cumpleaños"
+                android:theme="@style/MyButtonBirthD"
+                app:layout_constraintEnd_toEndOf="@+id/btnGoToEvents"
+                app:layout_constraintStart_toStartOf="@+id/btnGoToEvents"
+                app:layout_constraintTop_toBottomOf="@+id/btnGoToEvents" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGoToBands"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Grupos de Música"
+                android:theme="@style/MyButtonBand"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/btnGoToBirthDays"
+                app:layout_constraintStart_toStartOf="@+id/btnGoToEvents"
+                app:layout_constraintTop_toBottomOf="@+id/btnGoToBirthDays" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnToolsPhone"
+            android:layout_width="220dp"
+            android:layout_height="80dp"
+            android:layout_margin="16dp"
+            android:text="Herramientas"
+            android:theme="@style/MyButtonTools"
+            app:layout_constraintEnd_toEndOf="@+id/btnOpenLayoutTonterias"
+            app:layout_constraintStart_toStartOf="@+id/btnOpenLayoutTonterias"
+            app:layout_constraintTop_toBottomOf="@+id/layoutTonterias" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGeocoder"
+            android:layout_width="220dp"
+            android:layout_height="80dp"
+            android:layout_margin="16dp"
+            android:text="Google Maps"
+            android:theme="@style/MyButtonGps"
+            app:layout_constraintEnd_toEndOf="@+id/btnToolsPhone"
+            app:layout_constraintStart_toStartOf="@+id/btnToolsPhone"
+            app:layout_constraintTop_toBottomOf="@+id/btnToolsPhone" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRaspberry"
+            android:layout_width="220dp"
+            android:layout_height="80dp"
+            android:layout_margin="16dp"
+            android:text="Raspberry Pi"
+            android:theme="@style/MyButtonPi"
+            app:layout_constraintEnd_toEndOf="@+id/btnGeocoder"
+            app:layout_constraintStart_toStartOf="@+id/btnGeocoder"
+            app:layout_constraintTop_toBottomOf="@+id/btnGeocoder" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

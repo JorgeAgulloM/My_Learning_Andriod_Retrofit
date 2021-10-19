@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/tools_main_fragment"
+    android:background="@color/black_Clear">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="32dp"
+            android:text="Diario de mensajes"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerAllUsers"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_margin="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:text="Añadir mensaje al diario"
+            app:layout_constraintEnd_toEndOf="@+id/recyclerAllUsers"
+            app:layout_constraintStart_toStartOf="@+id/recyclerAllUsers"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerAllUsers" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnOpenCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:text="Abrir Cámara de fotos"
+            app:layout_constraintEnd_toEndOf="@+id/btnAddMsg"
+            app:layout_constraintStart_toStartOf="@+id/btnAddMsg"
+            app:layout_constraintTop_toBottomOf="@+id/btnAddMsg" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddAudio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:text="Guardar un Audio"
+            app:layout_constraintEnd_toEndOf="@+id/btnOpenCamera"
+            app:layout_constraintStart_toStartOf="@+id/btnOpenCamera"
+            app:layout_constraintTop_toBottomOf="@+id/btnOpenCamera" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

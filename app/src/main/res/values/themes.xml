@@ -1,0 +1,84 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Basic" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/star_Clear_700</item>
+        <item name="colorPrimaryVariant">@color/star_Clear_200</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnBackground">@color/black_Clear</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/star_Clear_200</item>
+        <item name="colorSecondaryVariant">@color/star_Clear_700</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor"
+            tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Base.Widget.AppCompat.DrawerArrowToggle." parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="MyButtonRetrofit" parent="android:Animation.Activity">
+        <item name="colorControlHighlight">@color/star_Clear_700</item>
+        <item name="colorButtonNormal">@color/star_Clear_200</item>
+        <item name="drawableLeftCompat">@drawable/icon_api_white</item>
+    </style>
+
+    <style name="MyButtonGps" parent="android:Animation.Activity">
+        <item name="colorControlHighlight">@color/star_Clear_700</item>
+        <item name="colorButtonNormal">@color/star_Clear_200</item>
+        <item name="drawableLeftCompat">@drawable/icon_maps_white</item>
+    </style>
+
+    <style name="MyButtonPi" parent="android:Animation.Activity">
+        <item name="colorControlHighlight">@color/star_Clear_700</item>
+        <item name="colorButtonNormal">@color/star_Clear_200</item>
+        <item name="drawableLeftCompat">@drawable/icon_raspberry_white</item>
+    </style>
+
+    <style name="MyButtonTools" parent="android:Animation.Activity">
+        <item name="colorControlHighlight">@color/star_Clear_700</item>
+        <item name="colorButtonNormal">@color/star_Clear_200</item>
+        <item name="drawableLeftCompat">@drawable/icon_camera_white</item>
+    </style>
+
+    <style name="MyButtonApi" parent="android:Animation.Activity">
+        <item name="colorControlHighlight">@color/star_Clear_700</item>
+        <item name="colorButtonNormal">@color/star_Clear_200</item>
+        <item name="drawableLeftCompat">@drawable/ic_baseline_tonteria</item>
+    </style>
+
+    <style name="MyButtonUsers" parent="android:Animation.Activity">
+        <item name="colorControlHighlight">@color/star_Clear_700</item>
+        <item name="colorButtonNormal">@color/star_Clear_200</item>
+        <item name="drawableLeftCompat">@drawable/ic_baseline_user</item>
+    </style>
+
+    <style name="MyButtonEvents" parent="android:Animation.Activity">
+        <item name="colorControlHighlight">@color/star_Clear_700</item>
+        <item name="colorButtonNormal">@color/star_Clear_200</item>
+        <item name="drawableLeftCompat">@drawable/ic_baseline_eventos</item>
+    </style>
+
+    <style name="MyButtonBirthD" parent="android:Animation.Activity">
+        <item name="colorControlHighlight">@color/star_Clear_700</item>
+        <item name="colorButtonNormal">@color/star_Clear_200</item>
+        <item name="drawableLeftCompat">@drawable/ic_baseline_cumpleanyos</item>
+    </style>
+
+    <style name="MyButtonBand" parent="android:Animation.Activity">
+        <item name="colorControlHighlight">@color/star_Clear_700</item>
+        <item name="colorButtonNormal">@color/star_Clear_200</item>
+        <item name="drawableLeftCompat">@drawable/ic_baseline_grupos_musica</item>
+    </style>
+
+    <style name="MyButtonDellMsg" parent="android:Animation.Activity">
+        <item name="colorControlHighlight">@color/star_Clear_700</item>
+        <item name="colorButtonNormal">@color/star_Clear_200</item>
+        <item name="drawableLeftCompat">@drawable/ic_baseline_delete</item>
+    </style>
+</resources>

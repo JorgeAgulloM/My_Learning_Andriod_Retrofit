@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_iot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_Clear"
+    tools:context=".iot_Control.IotControlMain">
+
+    <LinearLayout
+        android:id="@+id/home_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/star_Clear_700"
+            app:titleTextColor="@color/white" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@android:dimen/app_icon_size">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/txtNameIp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:hint="Introduce un nombre"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray_text"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/txtCurrentIp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:hint="Introduce una IP"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray_text"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtNameIp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSetIp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Conectar"
+            app:layout_constraintEnd_toEndOf="@+id/txtNameIp"
+            app:layout_constraintStart_toStartOf="@+id/txtNameIp"
+            app:layout_constraintTop_toBottomOf="@+id/txtCurrentIp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/stateTextConnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:hint="Sin conexión"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/txtCurrentIp"
+            app:layout_constraintStart_toStartOf="@+id/txtCurrentIp"
+            app:layout_constraintTop_toTopOf="@+id/btnSetIp" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchLed1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:enabled="false"
+            android:text="led 1"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/btnSetIp"
+            app:layout_constraintStart_toStartOf="@+id/btnSetIp"
+            app:layout_constraintTop_toBottomOf="@+id/btnSetIp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/stateLed1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:hint="Status..."
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/switchLed1"
+            app:layout_constraintEnd_toEndOf="@+id/stateTextConnect"
+            app:layout_constraintStart_toStartOf="@+id/stateTextConnect"
+            app:layout_constraintTop_toTopOf="@+id/switchLed1" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchLed2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:enabled="false"
+            android:text="led 2"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/switchLed1"
+            app:layout_constraintStart_toStartOf="@+id/switchLed1"
+            app:layout_constraintTop_toBottomOf="@+id/switchLed1" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/stateLed2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:hint="Status..."
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/switchLed2"
+            app:layout_constraintEnd_toEndOf="@+id/stateLed1"
+            app:layout_constraintStart_toStartOf="@+id/stateLed1"
+            app:layout_constraintTop_toTopOf="@+id/switchLed2" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchLed3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:enabled="false"
+            android:text="led 3"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/switchLed2"
+            app:layout_constraintStart_toStartOf="@+id/switchLed2"
+            app:layout_constraintTop_toBottomOf="@+id/switchLed2" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/stateLed3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:hint="Status..."
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/switchLed3"
+            app:layout_constraintEnd_toEndOf="@+id/stateLed2"
+            app:layout_constraintStart_toStartOf="@+id/stateLed2"
+            app:layout_constraintTop_toTopOf="@+id/switchLed3" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchLed4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:enabled="false"
+            android:text="led 4"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/switchLed3"
+            app:layout_constraintStart_toStartOf="@+id/switchLed3"
+            app:layout_constraintTop_toBottomOf="@+id/switchLed3" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/stateLed4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:hint="Status..."
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/switchLed4"
+            app:layout_constraintEnd_toEndOf="@+id/stateLed3"
+            app:layout_constraintStart_toStartOf="@+id/stateLed3"
+            app:layout_constraintTop_toTopOf="@+id/switchLed4" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchLedBucle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:enabled="false"
+            android:text="bucle"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/switchLed4"
+            app:layout_constraintStart_toStartOf="@+id/switchLed4"
+            app:layout_constraintTop_toBottomOf="@+id/switchLed4" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/stateLedBucle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:hint="Status..."
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/switchLedBucle"
+            app:layout_constraintEnd_toEndOf="@+id/stateLed4"
+            app:layout_constraintStart_toStartOf="@+id/stateLed4"
+            app:layout_constraintTop_toTopOf="@+id/switchLedBucle" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPowerOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:enabled="false"
+            android:text="Apagar Raspberry"
+            app:layout_constraintEnd_toStartOf="@+id/stateLedBucle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switchLedBucle" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/statePowerOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:hint="System On"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/btnPowerOff"
+            app:layout_constraintEnd_toEndOf="@+id/stateLedBucle"
+            app:layout_constraintStart_toStartOf="@+id/stateLedBucle"
+            app:layout_constraintTop_toTopOf="@+id/btnPowerOff" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnReboot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:enabled="false"
+            android:text="Reiniciar Raspberry"
+            app:layout_constraintEnd_toEndOf="@+id/btnPowerOff"
+            app:layout_constraintStart_toStartOf="@+id/btnPowerOff"
+            app:layout_constraintTop_toBottomOf="@+id/btnPowerOff" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/stateReboot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:hint="System On"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/btnReboot"
+            app:layout_constraintEnd_toEndOf="@+id/statePowerOff"
+            app:layout_constraintStart_toStartOf="@+id/statePowerOff"
+            app:layout_constraintTop_toTopOf="@+id/btnReboot" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

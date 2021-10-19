@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:id="@+id/menuOptions">
+        <item
+            android:id="@+id/Reconectar"
+            android:icon="@drawable/ic_baseline_autorenew_24"
+            android:title="menu"
+            android:visible="true"
+            app:showAsAction="ifRoom" />
+
+        <item
+            android:id="@+id/favorites"
+            android:icon="@drawable/ic_baseline_star_rate_24"
+            android:title="Favorites"
+            app:showAsAction="ifRoom" />
+    </group>
+
+    <group android:id="@+id/menu0">
+        <item
+            android:id="@+id/themes"
+            android:enabled="true"
+            android:orderInCategory="0"
+            android:title="Temas" />
+        <group
+            android:id="@+id/favoriteIpMenu">
+            <item
+                android:enabled="false"
+                android:icon="@drawable/ic_baseline_add_24"
+                android:orderInCategory="1"
+                android:title="IPs favoritas"/>
+
+        </group>
+
+    </group>
+
+</menu>

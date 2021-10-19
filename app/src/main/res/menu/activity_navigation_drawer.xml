@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/ApiMenu"
+        android:title="Api Tonterías">
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/tonterias"
+                    android:icon="@drawable/ic_baseline_tonteria"
+                    android:title="Tonterías" />
+
+                <item
+                    android:id="@+id/usuarios"
+                    android:icon="@drawable/ic_baseline_user"
+                    android:title="Usuarios" />
+
+                <item
+                    android:id="@+id/eventos"
+                    android:icon="@drawable/ic_baseline_eventos"
+                    android:title="Eventos" />
+
+                <item
+                    android:id="@+id/cumpleaños"
+                    android:icon="@drawable/ic_baseline_cumpleanyos"
+                    android:title="Cumpleaños" />
+
+                <item
+                    android:id="@+id/grupos_musica"
+                    android:icon="@drawable/ic_baseline_grupos_musica"
+                    android:title="Grupos de Música" />
+
+            </group>
+        </menu>
+    </item>
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/maps"
+            android:icon="@drawable/ic_baseline_gps"
+            android:title="Visualizar Gps" />
+    </group>
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/leds_control"
+            android:icon="@drawable/ic_baseline_rasp"
+            android:title="Control de Raspberry" />
+    </group>
+
+
+</menu>
